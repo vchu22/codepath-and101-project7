@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
                 val recipeImageArray = json.jsonObject.getJSONArray("meals")
                 for (i in 0 until recipeImageArray.length()) {
                     val imageLink = recipeImageArray.getJSONObject(i).getString("strMealThumb")
+                    val dishName = recipeImageArray.getJSONObject(i).getString("strMeal")
+                    val dishInstructions = recipeImageArray.getJSONObject(i).getString("strInstructions")
                     recipeList.add(imageLink)
                 }
                 val adapter = RecipeAdapter(recipeList)
