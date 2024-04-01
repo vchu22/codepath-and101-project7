@@ -8,13 +8,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="300dp"
         android:orientation="horizontal"
         tools:ignore="MissingConstraints">
         <ImageView
             android:id="@+id/recipe_image"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginTop="100dp"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <FrameLayout
@@ -22,22 +23,23 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textDish"
+                android:id="@+id/text_dish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
+                android:textStyle="bold"
                 android:text="Dish" />
 
             <TextView
-                android:id="@+id/textInstructions"
+                android:id="@+id/text_instructions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginStart="10dp"
-                android:text="Instructions" />
+                android:text="Instructions"
+                app:layout_constraintTop_toBottomOf="@+id/text_dish"/>
         </FrameLayout>
 
     </LinearLayout>

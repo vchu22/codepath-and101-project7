@@ -11,9 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import okhttp3.Headers
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var recipeList : MutableList<String>
+    private lateinit var recipeList : MutableList<JSONObject>
     private lateinit var rvRecipes : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
         rvRecipes = findViewById(R.id.recipe_list)
         recipeList = mutableListOf()
-        webQuery("salad")
+        webQuery("fish")
     }
 
     private fun webQuery(keyword : String) {
@@ -37,10 +38,8 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Recipe Success", "$json")
                 val recipeImageArray = json.jsonObject.getJSONArray("meals")
                 for (i in 0 until recipeImageArray.length()) {
-                    val imageLink = recipeImageArray.getJSONObject(i).getString("strMealThumb")
-                    val dishName = recipeImageArray.getJSONObject(i).getString("strMeal")
-                    val dishInstructions = recipeImageArray.getJSONObject(i).getString("strInstructions")
-                    recipeList.add(imageLink)
+                    val obj = recipeImageArray.getJSONObject(i)
+                    recipeList.add(obj)
                 }
                 val adapter = RecipeAdapter(recipeList)
                 rvRecipes.adapter = adapter
