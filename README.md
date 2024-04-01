@@ -36,7 +36,7 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-<img src='https://i.imgur.com/N9UAHJZ.gif' title='Video Demo' width='' alt='Video Demo' />
+![RecipeScroll](https://github.com/vchu22/codepath-and101-project6/assets/10492258/0dd7e680-c767-435f-b937-43a32236c832)
 
 GIF created with **Peek**
 
