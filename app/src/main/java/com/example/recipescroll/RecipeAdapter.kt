@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.json.JSONObject
@@ -41,6 +42,9 @@ class RecipeAdapter(recipeList: MutableList<JSONObject>) : RecyclerView.Adapter<
             .into(holder.recipeImage)
         holder.textDish.text = recipeList[position].getString("strMeal")
         holder.textInstructions.text = recipeList[position].getString("strInstructions")
+        holder.recipeImage.setOnClickListener {
+            Toast.makeText(holder.itemView.context, "Recipe at position $position clicked", Toast.LENGTH_SHORT).show()
+        }
     }
 
 }
