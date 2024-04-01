@@ -36,7 +36,7 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-<img src='https://i.imgur.com/zrUXrc9.gif' title='Video Demo' width='' alt='Video Demo' />
+<img src='https://i.imgur.com/N9UAHJZ.gif' title='Video Demo' width='' alt='Video Demo' />
 
 GIF created with **Peek**
 
