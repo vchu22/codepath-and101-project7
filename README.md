@@ -25,8 +25,8 @@ The following REQUIRED features are completed:
 The following STRETCH features are implemented:
 
 - [ ] Add a UI element for the user to interact with API further
-- [ ] Show a `Toast` or `Snackbar` when an item is clicked
-- [ ] Add item dividers with `DividerItemDecoration`
+- [x] Show a `Toast` or `Snackbar` when an item is clicked
+- [x] Add item dividers with `DividerItemDecoration`
 
 The following EXTRA features are implemented:
 
@@ -36,7 +36,7 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-![RecipeScroll](https://github.com/vchu22/codepath-and101-project6/assets/10492258/0dd7e680-c767-435f-b937-43a32236c832)
+<img src='https://i.imgur.com/5JZaX1h.gif' title='Video Demo' width='' alt='Video Demo' />
 
 GIF created with **Peek**
 
