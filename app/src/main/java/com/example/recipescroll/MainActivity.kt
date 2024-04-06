@@ -2,6 +2,8 @@ package com.example.recipescroll
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,16 +13,22 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import com.example.recipescroll.databinding.ActivityMainBinding
 import okhttp3.Headers
 import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recipeList : MutableList<JSONObject>
     private lateinit var rvRecipes : RecyclerView
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var searchBarTextView : TextView
+    private lateinit var searchButton : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -30,6 +38,12 @@ class MainActivity : AppCompatActivity() {
         recipeList = mutableListOf()
         rvRecipes.addItemDecoration(DividerItemDecoration(this@MainActivity, LinearLayoutManager.VERTICAL))
         webQuery("fish")
+        searchBarTextView = binding.searchBarText
+        searchButton = binding.searchButton
+        searchButton.setOnClickListener {
+            recipeList.clear()
+            webQuery(searchBarTextView.text.toString())
+        }
     }
 
     private fun webQuery(keyword : String) {
