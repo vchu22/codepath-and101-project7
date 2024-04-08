@@ -26,20 +26,21 @@
                 android:id="@+id/text_dish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
-                android:textStyle="bold"
-                android:text="Dish" />
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/Theme.RecipeScroll.Header"
+                android:text="Dish"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text_instructions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:textAppearance="@style/Theme.RecipeScroll.Body"
                 android:text="Instructions"
-                app:layout_constraintTop_toBottomOf="@+id/text_dish"/>
+                app:layout_constraintTop_toBottomOf="@+id/text_dish" />
         </FrameLayout>
 
     </LinearLayout>
