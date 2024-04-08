@@ -4,7 +4,7 @@
 
 Submitted by: **Vanessa Chu**
 
-Time spent: **X** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Summary
 
@@ -20,13 +20,13 @@ The following REQUIRED features are completed:
 
 - [x] App contains a RecyclerView that displays a list of scrollable data
 - [x] App displays at least two (2) pieces of data for each RecyclerView item
-- [ ] Use a downloadable font with custom color and size
-- [ ] Modify the theme of the app in `themes.xml`
-- [ ] Define and apply at least one style in **either** `themes.xml` or a new file `styles.xml`
+- [x] Use a downloadable font with custom color and size
+- [x] Modify the theme of the app in `themes.xml`
+- [x] Define and apply at least one style in **either** `themes.xml` or a new file `styles.xml`
 
 The following STRETCH features are implemented:
 
-- [ ] Update the night theme to use different versions of styles when in dark mode
+- [x] Update the night theme to use different versions of styles when in dark mode
 - [ ] Use different drawables when in dark mode
 
 The following EXTRA features are implemented:
@@ -37,9 +37,9 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
+![RecipeScroll_themed](https://github.com/vchu22/codepath-and101-project7/assets/10492258/d4185904-59ed-44b2-8bae-4f1c2d2447ba)
 
-GIF created with **your chosen GIF tool**
+GIF created with **peek**
 
 <!-- Recommended tools:
 - [Kap](https://getkap.co/) for macOS
