@@ -37,7 +37,7 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-![RecipeScroll_themed](https://github.com/vchu22/codepath-and101-project7/blob/main/RecipeScroll%20-%20Searchbar.gif?raw=true)
+![RecipeScroll_themed](https://github.com/vchu22/codepath-and101-project7/blob/main/RecipeScroll%20-%20Searchbar.gif)
 
 GIF created with **peek**
 
